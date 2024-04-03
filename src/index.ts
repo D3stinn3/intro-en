@@ -41,9 +41,9 @@ async function main() {
     // Create Family Token
     const createResult = await algorand.send.assetCreate({
         sender: Destinne.addr,
-        total: 1000n,
-        unitName: "Destinne",
-        assetName: "FamilyToken",
+        total: 1000000n,
+        unitName: "Africoin",
+        assetName: "Africa Coin",
     })
 
     // Result output
@@ -59,7 +59,7 @@ async function main() {
     console.log("Maria Minimum Balance Rate pre opt in: ", await algorand.account.getInformation(Maria.addr))
 
 
-    // Asset OptIn
+    // Asset OptIn enables users to "OptIn" to the asset created initially!
     await algorand.send.assetOptIn({
         sender: Maria.addr,
         assetId

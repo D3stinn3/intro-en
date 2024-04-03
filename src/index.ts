@@ -59,7 +59,7 @@ async function main() {
     console.log("Maria Minimum Balance Rate pre opt in: ", await algorand.account.getInformation(Maria.addr))
 
 
-    // Asset OptIn enables users to "OptIn" to the asset created initially!
+    // Asset OptIn enables users to "OptIn" to the asset created initially allowing then to interact with the object
     await algorand.send.assetOptIn({
         sender: Maria.addr,
         assetId
